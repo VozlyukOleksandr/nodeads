@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<p lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Group page</title>
+</head>
+<p>
+<lable> Group name </lable>
+    {{group.name}}</p>
+<p><lable> Group description </lable>
+    {{group.description}}</p>
+
+<p><form action="/app/v1.0/create_element/{{group.id}}/">
+        <label for="btn btn-primary"> Create new element </label>
+        <button type="submit" class="btn btn-primary">Create</button>
+</form></p>
+
+{%for element in elements%}
+<p><lable> Element name: </lable></p>
+    {{element.name}}
+<p><lable> Element description: </lable></p>
+    {{element.description}}
+<p><lable> Element create time: </lable></p>
+    {{element.create_time}}
+{%endfor%}
+</body>
+
+</html>

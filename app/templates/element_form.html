@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Create Element</title>
+</head>
+<body>
+<h1>Creating element</h1>
+<form action="/app/v1.0/{{group}}/" method="post" enctype="multipart/form-data">
+     <input name="csrfmiddlewaretoken" value={{cs}} type="hidden">
+    <input name="group", value="{{group}}" type="hidden">
+  <div class="form-group">
+      <label for="formGroupExampleInput">Element name</label>
+      <input class="form-control" id="formGroupExampleInput" type="text" name="name" placeholder="Element name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Element description</label>
+    <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+
+    <div class="form-group">
+    <label for="exampleFormControlFile1">Choice icon for Element</label>
+    <input type="file" class="form-control-file" name="icon" id="exampleFormControlFile1">
+  </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+</body>
+</html>
+
+
